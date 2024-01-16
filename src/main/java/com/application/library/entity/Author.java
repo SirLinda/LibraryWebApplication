@@ -1,10 +1,16 @@
 package com.application.library.entity;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.util.HashSet;
 import java.util.Set;
 
+@Getter
+@Setter
+@NoArgsConstructor
 @Entity
 @Table(name = "authors")
 public class Author {
@@ -21,7 +27,7 @@ public class Author {
     private String description;
 
     @ManyToMany(mappedBy = "authors", cascade = CascadeType.ALL)
-    private Set<Book> books = new HashSet<>();
+    private Set<Book> books = new HashSet<Book>();
 
     public Author(final Long id, final String name,
                   final String description) {
@@ -30,32 +36,4 @@ public class Author {
         this.description = description;
     }
 
-    public Author() {
-
-    }
-
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(final Long id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(final String name) {
-        this.name = name;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(final String description) {
-        this.description = description;
-    }
 }

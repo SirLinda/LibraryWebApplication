@@ -1,10 +1,16 @@
 package com.application.library.entity;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.util.HashSet;
 import java.util.Set;
 
+@Getter
+@Setter
+@NoArgsConstructor
 @Entity
 @Table(name = "books")
 public class Publisher {
@@ -24,23 +30,4 @@ public class Publisher {
         this.name = name;
     }
 
-    public Publisher() {
-
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(final Long id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(final String name) {
-        this.name = name;
-    }
 }
