@@ -56,6 +56,13 @@ public class Book {
         this.description = description;
     }
 
+    public Book(final String isbn, final String name,
+                final String description) {
+        this.isbn = isbn;
+        this.name = name;
+        this.description = description;
+    }
+
     public void removePublisher(Publisher publisher){
         this.publishers.remove(publisher);
         publisher.getBooks().remove(publisher);

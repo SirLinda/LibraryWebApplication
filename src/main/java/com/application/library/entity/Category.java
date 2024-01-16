@@ -30,4 +30,7 @@ public class Category {
         this.name = name;
     }
 
+    public Category(final String name) {
+        this.name = name;
+    }
 }

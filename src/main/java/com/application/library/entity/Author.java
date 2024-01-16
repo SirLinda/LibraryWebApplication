@@ -36,4 +36,8 @@ public class Author {
         this.description = description;
     }
 
+    public Author(final String name, final String description) {
+        this.name = name;
+        this.description = description;
+    }
 }

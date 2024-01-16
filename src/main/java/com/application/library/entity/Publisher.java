@@ -12,7 +12,7 @@ import java.util.Set;
 @Setter
 @NoArgsConstructor
 @Entity
-@Table(name = "books")
+@Table(name = "Publishers")
 public class Publisher {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -30,4 +30,7 @@ public class Publisher {
         this.name = name;
     }
 
+    public Publisher(final String name) {
+        this.name = name;
+    }
 }
