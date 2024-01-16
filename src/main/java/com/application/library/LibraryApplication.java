@@ -59,7 +59,7 @@ public class LibraryApplication {
 			Category   category3;
 			Publisher publisher3;
 
-			book3      = new Book("ABC2","Book name2","My second book");
+			book3      = new Book("ABC2","Book name2","My third book");
 			author3    = new Author("Author name2", "Author description2");
 			category3  = new Category("Third book category");
 			publisher3 = new Publisher("Third Publisher");

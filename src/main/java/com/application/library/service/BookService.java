@@ -26,6 +26,11 @@ public class BookService {
     public void createBook(Book book){
         bookRepository.save(book);
     }
+
+    public void updateBook(Book book){
+        bookRepository.save(book);
+    }
+
     public void deleteBook(Long bookId){
         Book book;
         book = bookRepository.findById(bookId)
