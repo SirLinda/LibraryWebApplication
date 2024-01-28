@@ -32,7 +32,7 @@ public class AuthorService {
         authorRepository.save(author);
     }
 
-    public void deleteById(Long authorId){
+    public void deleteAuthor(Long authorId){
         Author author;
         author = authorRepository.findById(authorId)
                 .orElseThrow(()->new RuntimeException("Author not found"));
